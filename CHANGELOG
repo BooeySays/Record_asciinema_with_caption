@@ -2,6 +2,36 @@ v0.9
 -	Added another option for bootup - option to not load anything
 -	
 
+_________________________________________________________________________________________
+v0.4
+-	created load-settings.sh - which loads:
+		- $GREYBAR - Var used to store one line of the grey bar
+		- _printcenter() - function that usesd the $GREYBAR var to print out
+		  the 3 grey lines below the main bar		
+		- Bnnerps() - Main function that is saved to PROMPT_COMMAND which prints
+		  out all the bars which each new prompt refresh
+-	created title.sh - which loads the title screen
+-	created capture_screen.sh which creates a dir for the asciinema cast and
+	starts the app
+
+_________________________________________________________________________________________
+v0.3
+-	Added a 'header bar' under the main title bar
+-	Added another 2 bars under the header bar to be use to display any
+	extra information or commands that need to be entered
+		- Made the last three bars white on grey with commands encompassed by
+		  two yellow "
+-	Made function to pick main bars color at random and keep fonts colot at terminals
+	default
+
+
+_________________________________________________________________________________________
+v0.2
+-	created Bnnerps function which loads the bars up top
+		- Bnnerps is added to $PROMPT_COMMAND
+
+
+_________________________________________________________________________________________
 v0.1
 -	Created main script for title screen
 -	Used figlet to display title screen
