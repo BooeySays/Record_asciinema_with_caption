@@ -1,0 +1,8 @@
+v0.9
+-	Added another option for bootup - option to not load anything
+-	
+
+v0.1
+-	Created main script for title screen
+-	Used figlet to display title screen
+-	Created TXTTITLE file to store string for title screen
