@@ -1,0 +1,14 @@
+#!/bin/bash
+
+THISDIR=$PWD
+clear
+. $THISDIR/load-settings.sh
+cat ./HOWTO;
+echo -e "\033[m"
+cat $THISDIR/config/TITLE.txt | figlet -k -c -w $COLUMNS -f smmono9
+echo -e "\n\n\n"
+sleep 10;
+export PROMPT_COMMAND='Bnnerps'
+cd ~
+clear
+echo -en "\n\n\n\n"

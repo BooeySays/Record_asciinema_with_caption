@@ -18,12 +18,29 @@ function _printcenter(){
 	unset STRING STRING_LEN CUFF
 }
 
+# function Bnnerps(){
+#	TITLECLR=$(cat "$ASCIISTART"/config/COLORBG)
+#	FONTCLR=$(cat "$ASCIISTART"/config/COLORFG)
+#	tput sc
+#	tput cup 0 0
+#	printf "\033[48;5;"$TITLECLR"m %.s" $(seq 1 $COLUMNS); echo -en "\r\033[01;38;5;"$FONTCLR"m$(cat "$ASCIISTART"/config/TXTBAR | figlet -f term -l -w $COLUMNS)\033[m\n"
+#	tput cup 1 0
+#	echo -en "$GREYBAR"; echo -en "\r\033[01;38;5;255m$(cat $ASCIISTART/config/TXTHEADER | figlet -f term -l -w $COLUMNS)\n"
+#	tput cup 2 0
+#	_printcenter
+#	tput cup 3 0
+#	echo -en "$GREYBAR\033[m\n"
+#	tput rc
+#}
+
 function Bnnerps(){
 	TITLECLR=$(cat "$ASCIISTART"/config/COLORBG)
 	FONTCLR=$(cat "$ASCIISTART"/config/COLORFG)
 	tput sc
 	tput cup 0 0
-	printf "\033[48;5;"$TITLECLR"m %.s" $(seq 1 $COLUMNS); echo -en "\r\033[01;38;5;"$FONTCLR"m$(cat "$ASCIISTART"/config/TXTBAR | figlet -f term -l -w $COLUMNS)\033[m\n"
+	printf "\033[48;5;"$TITLECLR"m %.s" $(seq 1 $COLUMNS)
+        echo -en "\r\033[01;38;5;255m$(cat "$ASCIISTART"/config/Title.main | figlet -f term -l -w $COLUMNS)\033[m"
+        echo -en "\033[01;38;5;233m$(cat "$ASCIISTART"/config/Title.sub | figlet -f term -l -w $COLUMNS)\033[m\n"
 	tput cup 1 0
 	echo -en "$GREYBAR"; echo -en "\r\033[01;38;5;255m$(cat $ASCIISTART/config/TXTHEADER | figlet -f term -l -w $COLUMNS)\n"
 	tput cup 2 0

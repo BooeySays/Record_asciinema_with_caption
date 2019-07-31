@@ -1,0 +1,6 @@
+export START_ASCIINEMA=0
+
+alias clear='/usr/bin/clear; echo -e "\n\n\n\n"'
+bind '"\C-l":"clear\n"'
+
+
